@@ -175,7 +175,7 @@ nav.navbar.active {
   padding: 5px;
   border-radius: 50px;
   text-align: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .navigation a {
   display: block;
@@ -498,24 +498,18 @@ span.indexing-full {
     font-size: 32px;
   }
   .navigation {
+    position: relative;
     width: 100%;
-    border-radius: 20px;
-    flex-direction: row;
-    background-color: transparent;
   }
   .navigation a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    background-color: #1a32630e;
-    color: #1a3263ab;
-    margin: 5px;
     height: 60px;
   }
-  .navigation a.active {
+  /* .navigation a.active {
     color: white;
-  }
+  } */
 }
 @media (max-width: 450px) {
   .testimony .testy-grid img {
@@ -524,5 +518,14 @@ span.indexing-full {
   }
   .testimony .testy-grid p#quote {
     font-size: 20px;
+  }
+}
+@media (max-width: 365px) {
+  .navigation {
+    flex-direction: column;
+    border-radius: 30px;
+  }
+  .navigation a {
+    width: 100%;
   }
 }
