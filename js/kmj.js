@@ -1,24 +1,27 @@
-showSlides(slideIndex);
+const navbar = document.getElementsByClassName("navbar");
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function openTab(evt, content) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("nav-link");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(content).style.display = "flex";
+  evt.currentTarget.className += " active";
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+window.onscroll = function () {
+  scrollFunction();
+};
 
-function showSlides(n) {
-  var i;
-  var slides = sliderparent.childNodes[i].className == "slider";
-  if (n > slides.length) {
-    slideIndex = 1;
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("nav").classList.add("active");
+  } else {
+    document.getElementById("nav").classList.remove("active");
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
 }

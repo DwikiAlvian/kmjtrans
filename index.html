@@ -13,7 +13,7 @@
 
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav id="nav" class="navbar">
       <a href="">kmjtrans</a>
       <div id="sidebar">
         <ul>
@@ -32,7 +32,10 @@
           <li class="splide__slide">
             <!-- ========================== -->
             <!-- !! JUST EDIT BELOW THIS !! -->
-            <img id="splide__image" src="img/slide1.jpg" />
+            <img
+              id="splide__image"
+              src="https://images.unsplash.com/photo-1485575301924-6891ef935dcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+            />
             <div class="splide__content">
               <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
               <p>Cek Resi anda</p>
@@ -44,7 +47,10 @@
           <li class="splide__slide">
             <!-- ========================== -->
             <!-- !! JUST EDIT BELOW THIS !! -->
-            <img id="splide__image" src="img/slide2.jpg" />
+            <img
+              id="splide__image"
+              src="https://images.unsplash.com/photo-1592015283179-2fe84bca2cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80"
+            />
             <div class="splide__content">
               <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
               <p>Cek Resi anda</p>
@@ -56,7 +62,10 @@
           <li class="splide__slide">
             <!-- ========================== -->
             <!-- !! JUST EDIT BELOW THIS !! -->
-            <img id="splide__image" src="img/slide3.jpg" />
+            <img
+              id="splide__image"
+              src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
+            />
             <div class="splide__content">
               <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
               <p>Cek Resi anda</p>
@@ -78,54 +87,106 @@
     </div>
 
     <!-- MAIN SECTION -->
-    <div class="section section-white">
+    <div id="tab" class="section section-white">
       <div class="flex flex-center">
         <div class="navigation">
-          <a href="">Lacak Paket</a>
-          <a id="active" href="">Hitung Tarif</a>
-          <a href="">Lokasi</a>
+          <a class="nav-link" href="#tab" onclick="openTab(event, 'Lacak')"
+            >Lacak Paket</a
+          >
+          <a
+            class="nav-link active"
+            href="#tab"
+            onclick="openTab(event, 'Bayar')"
+            >Hitung Tarif</a
+          >
+          <a class="nav-link" href="#tab" onclick="openTab(event, 'Lokasi')"
+            >Lokasi</a
+          >
         </div>
 
-        <div class="grid col col-2 mg-top-50">
-          <div class="card card-white">
-            <div class="card-inline">
-              <i class="fi fi-map-marker-alt"></i>
-              <span>Lokasi Awal</span>
+        <!-- ESTIMASI PEMBAYARAN -->
+        <div id="Bayar" class="tabcontent">
+          <div class="grid col col-2 mg-top-50 grid-res">
+            <div class="card card-white">
+              <div class="card-inline">
+                <i class="fi fi-map-marker-alt"></i>
+                <span>Lokasi Awal</span>
+              </div>
+              <p>Pilih lokasi penjemputan barang yang akan dikirim</p>
+              <input type="text" placeholder="Pilih Lokasi" />
             </div>
-            <p>Pilih lokasi penjemputan barang yang akan dikirim</p>
-            <input type="text" placeholder="Pilih Lokasi" />
+            <div class="card card-white">
+              <div class="card-inline">
+                <i class="fi fi-navigate"></i>
+                <span>Lokasi Tujuan</span>
+              </div>
+              <p>Barang yang dijemput akan dikirimkan ke lokasi ini</p>
+              <input type="text" placeholder="Pilih Lokasi" />
+            </div>
           </div>
+
+          <div class="grid col">
+            <div class="card card-white">
+              <div class="card-inline">
+                <i class="fi fi-shopping-basket"></i>
+                <span>Berat Barang</span>
+              </div>
+              <p>Berat/Weight dari barang yang akan dikirimkan</p>
+              <input type="text" placeholder="Pilih Berat" />
+            </div>
+          </div>
+          <button class="button button-1 button-orange mg-top-50">
+            Cek Estimasi Biaya
+          </button>
+        </div>
+      </div>
+
+      <!-- LACAK PAKET -->
+      <div id="Lacak" class="tabcontent" style="display: none">
+        <div class="grid col mg-top-50">
           <div class="card card-white">
             <div class="card-inline">
-              <i class="fi fi-navigate"></i>
-              <span>Lokasi Tujuan</span>
+              <i class="fi fi-ticket-alt"></i>
+              <span>Masukkan No. Resi</span>
             </div>
-            <p>Barang yang dijemput akan dikirimkan ke lokasi ini</p>
-            <input type="text" placeholder="Pilih Lokasi" />
+            <p>Nomor Resi didapatkan setelah barang diambil untuk dikirmkan</p>
+            <input type="text" placeholder="Cth: 94328012" />
           </div>
         </div>
-
-        <div class="grid col">
-          <div class="card card-white">
-            <div class="card-inline">
-              <i class="fi fi-shopping-basket"></i>
-              <span>Berat Barang</span>
-            </div>
-            <p>Berat/Weight dari barang yang akan dikirimkan</p>
-            <input type="text" placeholder="Pilih Lokasi" />
-          </div>
-        </div>
-
         <button class="button button-1 button-orange mg-top-50">
-          Cek Estimasi Biaya
+          Konfirmasi No. Resi
         </button>
+      </div>
+
+      <!-- LOKASI -->
+      <div id="Lokasi" class="tabcontent" style="display: none">
+        <div class="grid col col-2 mg-top-50 grid-res">
+          <div class="card card-white">
+            <span class="card-title">Kab. Malang</span>
+          </div>
+          <div class="card card-white">
+            <span class="card-title">Kab. Blitar</span>
+          </div>
+          <div class="card card-white">
+            <span class="card-title">D.I Yogyakarta</span>
+          </div>
+          <div class="card card-white">
+            <span class="card-title">Kab. Semarang</span>
+          </div>
+          <div class="card card-white">
+            <span class="card-title">USSR</span>
+          </div>
+          <div class="card card-white">
+            <span class="card-title">Germany</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- SECOND SECTION -->
     <div class="section section-wider section-blue center">
       <span class="section-title">Mengapa Memilih Kami?</span>
-      <div class="grid col col-3 mg-top-bottom-50">
+      <div class="grid col col-3 mg-top-bottom-50 grid-res">
         <div class="card card-white-trans card-left">
           <span class="indexing">1</span>
           <span class="card-title">Terpercaya</span>
@@ -148,7 +209,7 @@
 
     <!-- THIRD SECTION -->
     <div class="section section-wider section-orange">
-      <div class="grid col col-3">
+      <div class="grid col col-3 grid-res">
         <div class="card card-text-white">
           <span class="indexing-full">
             <i class="fi fi-map"></i>
@@ -172,13 +233,126 @@
         </div>
       </div>
     </div>
+
+    <!-- FOURTH SECTION -->
+    <div class="section section-wider section-white center">
+      <span class="section-title">Mitra Kerja</span>
+      <div class="image-flex flex flex-row">
+        <img
+          src="https://images.unsplash.com/photo-1628425780107-2387f622726d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1619695724140-7ee0c416e1ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1628472667705-2d7abe39fccb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1628425780107-2387f622726d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1619695724140-7ee0c416e1ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1628472667705-2d7abe39fccb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+      </div>
+      <div
+        class="card card-blue card-center"
+        style="padding-top: 50px; padding-bottom: 50px"
+      >
+        <span class="card-title" style="max-width: 250px; margin-bottom: 15px"
+          >Tertarik menjadi salah satu dari mereka?</span
+        >
+        <a href="" class="button button-1 button-orange">Hubungi Segera</a>
+      </div>
+    </div>
+
+    <!-- FIFTH SECTION -->
+    <div class="section section-blue section-wider">
+      <div class="splide testimony">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="testy-grid">
+                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div class="flex flex-left">
+                  <p id="quote">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sodales aliquam finibus. Quisque non purus a ante
+                    luctus rhoncus sit amet et libero."
+                  </p>
+                  <div id="author" class="flex flex-left">
+                    <span class="bold">Hendra Sudarmawan</span>
+                    <span>CEO Phoenix Framework</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="testy-grid">
+                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div class="flex flex-left">
+                  <p id="quote">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sodales aliquam finibus. Quisque non purus a ante
+                    luctus rhoncus sit amet et libero."
+                  </p>
+                  <div id="author" class="flex flex-left">
+                    <span class="bold">Hendra Cokolio</span>
+                    <span>CEO Phoenix Framework</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="testy-grid">
+                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div class="flex flex-left">
+                  <p id="quote">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sodales aliquam finibus. Quisque non purus a ante
+                    luctus rhoncus sit amet et libero."
+                  </p>
+                  <div id="author" class="flex flex-left">
+                    <span class="bold">Hendra Belanda</span>
+                    <span>CEO Phoenix Framework</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="splide__arrows" style="display: none">
+          <button class="splide__arrow splide__arrow--prev">
+            <i class="fi fi-angle-left"></i>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <i class="fi fi-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 
   <!-- IMPORT SPLIDEJS -->
+  <script src="js/kmj.js"></script>
   <script src="src/splidejs/dist/js/splide.min.js"></script>
   <script>
     new Splide(".splide", {
       type: "loop",
+      keyboard: false,
+    }).mount();
+
+    new Splide(".splide.testimony", {
+      type: "loop",
+      autoplay: true,
       keyboard: false,
     }).mount();
   </script>
