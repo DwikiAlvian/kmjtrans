@@ -1,4 +1,7 @@
+let vh = window.innerHeight * 0.01;
 const navbar = document.getElementsByClassName("navbar");
+
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 function openTab(evt, content) {
   var i, tabcontent, tablinks;

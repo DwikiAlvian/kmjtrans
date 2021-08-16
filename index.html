@@ -34,12 +34,16 @@
             <!-- !! JUST EDIT BELOW THIS !! -->
             <img
               id="splide__image"
-              src="https://images.unsplash.com/photo-1485575301924-6891ef935dcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              src="https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
             />
             <div class="splide__content">
-              <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
-              <p>Cek Resi anda</p>
-              <a href="" class="button button-1">CEK RESI</a>
+              <span>kmjtrans</span>
+              <h1>Pelayanan Cepat</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ultricies pellentesque enim, vitae accumsan dui
+                volutpat non.
+              </p>
             </div>
             <!-- !! JUST EDIT ABOVE THIS !! -->
             <!-- ========================== -->
@@ -49,12 +53,16 @@
             <!-- !! JUST EDIT BELOW THIS !! -->
             <img
               id="splide__image"
-              src="https://images.unsplash.com/photo-1592015283179-2fe84bca2cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80"
+              src="https://images.pexels.com/photos/4391478/pexels-photo-4391478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
             <div class="splide__content">
-              <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
-              <p>Cek Resi anda</p>
-              <a href="" class="button button-1">CEK RESI</a>
+              <span>kmjtrans</span>
+              <h1>Fitur Lengkap</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ultricies pellentesque enim, vitae accumsan dui
+                volutpat non.
+              </p>
             </div>
             <!-- !! JUST EDIT ABOVE THIS !! -->
             <!-- ========================== -->
@@ -64,12 +72,16 @@
             <!-- !! JUST EDIT BELOW THIS !! -->
             <img
               id="splide__image"
-              src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
+              src="https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
             <div class="splide__content">
-              <h1>KMJ <mark>Trans</mark> & <mark>Logistic</mark></h1>
-              <p>Cek Resi anda</p>
-              <a href="" class="button button-1">CEK RESI</a>
+              <span>kmjtrans</span>
+              <h1>Disediakan untuk Anda</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ultricies pellentesque enim, vitae accumsan dui
+                volutpat non.
+              </p>
             </div>
             <!-- !! JUST EDIT ABOVE THIS !! -->
             <!-- ========================== -->
@@ -87,201 +99,194 @@
     </div>
 
     <!-- MAIN SECTION -->
-    <div id="tab" class="section section-white">
-      <div class="flex flex-center">
-        <div class="navigation">
-          <a class="nav-link" href="#tab" onclick="openTab(event, 'Lacak')"
-            >Lacak Paket</a
+    <div
+      id="tab"
+      class="grid col col-40-60 grid-res section section-wider section-white"
+    >
+      <div>
+        <div class="card card-res">
+          <span class="card-nav">LAYANAN</span>
+          <span class="card-title"
+            >Mulai dari Cek Harga sampai Cek Lokasi Penjemputan</span
           >
+          <p>
+            Lakukan pengecekan harga sebelum memesan, atau melacak paket pesanan
+          </p>
+        </div>
+        <div class="navigation grid-right-50">
           <a
             class="nav-link active"
             href="#tab"
             onclick="openTab(event, 'Bayar')"
             >Hitung Tarif</a
           >
+          <a class="nav-link" href="#tab" onclick="openTab(event, 'Lacak')"
+            >Lacak Paket</a
+          >
           <a class="nav-link" href="#tab" onclick="openTab(event, 'Lokasi')"
             >Lokasi</a
           >
         </div>
+      </div>
+      <div id="tabcontent">
+        <div class="flex flex-center">
+          <!-- ESTIMASI PEMBAYARAN -->
+          <div id="Bayar" class="tabcontent">
+            <div class="grid col col-2 grid-res">
+              <div class="card card-white">
+                <div class="card-inline">
+                  <i class="fi fi-map-marker-alt"></i>
+                  <span>Lokasi Awal</span>
+                </div>
+                <p>Pilih lokasi penjemputan barang yang akan dikirim</p>
+                <input type="text" placeholder="Pilih Lokasi" />
+              </div>
+              <div class="card card-white">
+                <div class="card-inline">
+                  <i class="fi fi-navigate"></i>
+                  <span>Lokasi Tujuan</span>
+                </div>
+                <p>Barang yang dijemput akan dikirimkan ke lokasi ini</p>
+                <input type="text" placeholder="Pilih Lokasi" />
+              </div>
+            </div>
 
-        <!-- ESTIMASI PEMBAYARAN -->
-        <div id="Bayar" class="tabcontent">
-          <div class="grid col col-2 mg-top-50 grid-res">
-            <div class="card card-white">
-              <div class="card-inline">
-                <i class="fi fi-map-marker-alt"></i>
-                <span>Lokasi Awal</span>
+            <div class="grid col">
+              <div class="card card-white">
+                <div class="card-inline">
+                  <i class="fi fi-shopping-basket"></i>
+                  <span>Berat Barang</span>
+                </div>
+                <p>Berat/Weight dari barang yang akan dikirimkan</p>
+                <input type="text" placeholder="Pilih Berat" />
               </div>
-              <p>Pilih lokasi penjemputan barang yang akan dikirim</p>
-              <input type="text" placeholder="Pilih Lokasi" />
             </div>
-            <div class="card card-white">
-              <div class="card-inline">
-                <i class="fi fi-navigate"></i>
-                <span>Lokasi Tujuan</span>
-              </div>
-              <p>Barang yang dijemput akan dikirimkan ke lokasi ini</p>
-              <input type="text" placeholder="Pilih Lokasi" />
-            </div>
+            <button class="button button-1 button-orange mg-top-50">
+              Cek Estimasi Biaya
+            </button>
           </div>
+        </div>
 
+        <!-- LACAK PAKET -->
+        <div id="Lacak" class="tabcontent" style="display: none">
           <div class="grid col">
             <div class="card card-white">
               <div class="card-inline">
-                <i class="fi fi-shopping-basket"></i>
-                <span>Berat Barang</span>
+                <i class="fi fi-ticket-alt"></i>
+                <span>Masukkan No. Resi</span>
               </div>
-              <p>Berat/Weight dari barang yang akan dikirimkan</p>
-              <input type="text" placeholder="Pilih Berat" />
+              <p>
+                Nomor Resi didapatkan setelah barang diambil untuk dikirmkan
+              </p>
+              <input type="text" placeholder="Cth: 94328012" />
             </div>
           </div>
           <button class="button button-1 button-orange mg-top-50">
-            Cek Estimasi Biaya
+            Konfirmasi No. Resi
           </button>
         </div>
-      </div>
 
-      <!-- LACAK PAKET -->
-      <div id="Lacak" class="tabcontent" style="display: none">
-        <div class="grid col mg-top-50">
-          <div class="card card-white">
-            <div class="card-inline">
-              <i class="fi fi-ticket-alt"></i>
-              <span>Masukkan No. Resi</span>
+        <!-- LOKASI -->
+        <div id="Lokasi" class="tabcontent" style="display: none">
+          <div class="grid col col-2 grid-res">
+            <div class="card card-white card-text-small">
+              <span class="card-title">Kab. Malang</span>
             </div>
-            <p>Nomor Resi didapatkan setelah barang diambil untuk dikirmkan</p>
-            <input type="text" placeholder="Cth: 94328012" />
-          </div>
-        </div>
-        <button class="button button-1 button-orange mg-top-50">
-          Konfirmasi No. Resi
-        </button>
-      </div>
-
-      <!-- LOKASI -->
-      <div id="Lokasi" class="tabcontent" style="display: none">
-        <div class="grid col col-2 mg-top-50 grid-res">
-          <div class="card card-white">
-            <span class="card-title">Kab. Malang</span>
-          </div>
-          <div class="card card-white">
-            <span class="card-title">Kab. Blitar</span>
-          </div>
-          <div class="card card-white">
-            <span class="card-title">D.I Yogyakarta</span>
-          </div>
-          <div class="card card-white">
-            <span class="card-title">Kab. Semarang</span>
-          </div>
-          <div class="card card-white">
-            <span class="card-title">USSR</span>
-          </div>
-          <div class="card card-white">
-            <span class="card-title">Germany</span>
+            <div class="card card-white card-text-small">
+              <span class="card-title">Kab. Blitar</span>
+            </div>
+            <div class="card card-white card-text-small">
+              <span class="card-title">D.I Yogyakarta</span>
+            </div>
+            <div class="card card-white card-text-small">
+              <span class="card-title">Kab. Semarang</span>
+            </div>
+            <div class="card card-white card-text-small">
+              <span class="card-title">USSR</span>
+            </div>
+            <div class="card card-white card-text-small">
+              <span class="card-title">Germany</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- SECOND SECTION -->
-    <div class="section section-wider section-blue center">
-      <span class="section-title">Mengapa Memilih Kami?</span>
-      <div class="grid col col-3 mg-top-bottom-50 grid-res">
-        <div class="card card-white-trans card-left">
-          <span class="indexing">1</span>
-          <span class="card-title">Terpercaya</span>
+    <div class="section section-wider section-blue">
+      <div class="grid col col-60-40 mg-top-bottom-50 grid-res">
+        <div class="grid col col-2 grid-res grid-right-50">
+          <span class="feat">Akses Mudah</span>
+          <span class="feat">Fitur Lengkap</span>
+          <span class="feat">Layanan 24-jam</span>
+        </div>
+        <div class="card card-text-white card-res">
+          <span class="card-nav">PELAYANAN</span>
+          <span class="card-title">Mengapa Memilih Kami?</span>
           <p>
-            Sudah melayani banyak pelanggan dan bekerja-sama dengan banyak klien
+            Lihat berbagai alasan mengapa anda harus memilih kami dalam membantu
+            bisnis anda
           </p>
-        </div>
-        <div class="card card-white-trans card-left">
-          <span class="indexing">2</span>
-          <span class="card-title">Independen</span>
-          <p>Terdaftar dalam usaha mikro rakyat dari Kominfo</p>
-        </div>
-        <div class="card card-white-trans card-left">
-          <span class="indexing">3</span>
-          <span class="card-title">Pengiriman Menyeluruh</span>
-          <p>Lokasi tujuan pengiriman luas</p>
         </div>
       </div>
     </div>
 
     <!-- THIRD SECTION -->
-    <div class="section section-wider section-orange">
-      <div class="grid col col-3 grid-res">
-        <div class="card card-text-white">
-          <span class="indexing-full">
-            <i class="fi fi-map"></i>
-          </span>
-          <span class="card-title">Area Penjemputan Barang</span>
-          <p>Penjemputan barang di area Kab. Malang dan sekitarnya</p>
-        </div>
-        <div class="card card-text-white">
-          <span class="indexing-full">
-            <i class="fi fi-dollar"></i>
-          </span>
-          <span class="card-title">Pengecekan Tarif Mudah</span>
-          <p>Harga estimasi tarif pengiriman bisa dicek dengan mudah</p>
-        </div>
-        <div class="card card-text-white">
-          <span class="indexing-full">
-            <i class="fi fi-search"></i>
-          </span>
-          <span class="card-title">Lacak Pengiriman</span>
-          <p>Lacak barang yang dikirim secara online dengan mudah</p>
-        </div>
-      </div>
-    </div>
 
     <!-- FOURTH SECTION -->
-    <div class="section section-wider section-white center">
-      <span class="section-title">Mitra Kerja</span>
+    <div
+      class="grid col col-40-60 grid-res section section-wider section-white"
+    >
+      <div class="card grid-right-50 card-res" style="margin-bottom: 50px">
+        <span class="card-nav">KLIEN</span>
+        <span class="card-title">Mitra Kerja</span>
+        <p>
+          Kami bekerja sama dengan banyak klien untuk mempermudah
+          penjemputan/pengiriman barang
+        </p>
+        <a href="" class="button button-1 button-orange">Gabung</a>
+      </div>
       <div class="image-flex flex flex-row">
         <img
-          src="https://images.unsplash.com/photo-1628425780107-2387f622726d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://images.pexels.com/photos/233698/pexels-photo-233698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
         <img
-          src="https://images.unsplash.com/photo-1619695724140-7ee0c416e1ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          src="https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
         <img
-          src="https://images.unsplash.com/photo-1628472667705-2d7abe39fccb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://images.pexels.com/photos/840343/pexels-photo-840343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
         <img
-          src="https://images.unsplash.com/photo-1628425780107-2387f622726d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
         <img
-          src="https://images.unsplash.com/photo-1619695724140-7ee0c416e1ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          src="https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
         <img
-          src="https://images.unsplash.com/photo-1628472667705-2d7abe39fccb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://images.pexels.com/photos/1996330/pexels-photo-1996330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
-      </div>
-      <div
-        class="card card-blue card-center"
-        style="padding-top: 50px; padding-bottom: 50px"
-      >
-        <span class="card-title" style="max-width: 250px; margin-bottom: 15px"
-          >Tertarik menjadi salah satu dari mereka?</span
-        >
-        <a href="" class="button button-1 button-orange">Hubungi Segera</a>
       </div>
     </div>
 
     <!-- FIFTH SECTION -->
     <div class="section section-blue section-wider">
-      <div class="splide testimony">
+      <div class="splide testimony center-pagination">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
               <div class="testy-grid">
-                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div>
+                  <img
+                    src="https://images.pexels.com/photos/4484076/pexels-photo-4484076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""
+                  />
+                </div>
                 <div class="flex flex-left">
                   <p id="quote">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -297,7 +302,12 @@
             </li>
             <li class="splide__slide">
               <div class="testy-grid">
-                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div>
+                  <img
+                    src="https://images.pexels.com/photos/4484045/pexels-photo-4484045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""
+                  />
+                </div>
                 <div class="flex flex-left">
                   <p id="quote">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -313,7 +323,12 @@
             </li>
             <li class="splide__slide">
               <div class="testy-grid">
-                <div><img src="img/slide1.jpg" alt="" /></div>
+                <div>
+                  <img
+                    src="https://images.pexels.com/photos/4484150/pexels-photo-4484150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""
+                  />
+                </div>
                 <div class="flex flex-left">
                   <p id="quote">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -336,6 +351,126 @@
           <button class="splide__arrow splide__arrow--next">
             <i class="fi fi-angle-right"></i>
           </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIXTH SECTION -->
+    <div class="section section-white section-wider center">
+      <div class="card card-center">
+        <span class="card-nav">BERITA</span>
+        <span class="card-title">Baca Artikel Terbaru Dari Kami</span>
+      </div>
+      <div class="news-container">
+        <div class="card card-news">
+          <img
+            src="https://images.pexels.com/photos/7363196/pexels-photo-7363196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            class="news"
+          />
+          <div class="news-content">
+            <span class="card-title">Gerai Baru di Surabaya</span>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a href="">BACA SELENGKAPNYA</a>
+          </div>
+        </div>
+        <div class="card card-news">
+          <img
+            src="https://images.pexels.com/photos/7363196/pexels-photo-7363196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            class="news"
+          />
+          <div class="news-content">
+            <span class="card-title">Penambahan Armada Angkasa</span>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a href="">BACA SELENGKAPNYA</a>
+          </div>
+        </div>
+        <div class="card card-news">
+          <img
+            src="https://images.pexels.com/photos/7363196/pexels-photo-7363196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            class="news"
+          />
+          <div class="news-content">
+            <span class="card-title">Perluasan Wilayah Jawa Barat</span>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a href="">BACA SELENGKAPNYA</a>
+          </div>
+        </div>
+        <div class="card card-news">
+          <img
+            src="https://images.pexels.com/photos/7363196/pexels-photo-7363196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            class="news"
+          />
+          <div class="news-content">
+            <span class="card-title">Jasa Tebak Skor Bola Online</span>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a href="">BACA SELENGKAPNYA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEVENTH SECTION -->
+    <div class="about-us">
+      <img
+        src="https://images.pexels.com/photos/758742/pexels-photo-758742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt=""
+      />
+      <card id="head-text" class="card card-text-white card-center">
+        <span class="card-nav">TENTANG KAMI</span>
+        <span class="card-title">
+          KMJ Trans adalah Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Suspendisse molestie neque arcu, in tempus odio accumsan et.
+        </span>
+      </card>
+
+      <div id="v-m" class="grid col col-2 grid-res">
+        <div class="card card-text-white card-res">
+          <span class="card-nav">Visi</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            molestie neque arcu, in tempus odio accumsan et.
+          </p>
+        </div>
+        <div class="card card-text-white card-res">
+          <span class="card-nav">Misi</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            molestie neque arcu, in tempus odio accumsan et.
+          </p>
+        </div>
+      </div>
+
+      <div id="link" class="grid col col-2 grid-res">
+        <div>
+          <a href="">
+            <div class="flex flex-inline">
+              <i class="fi fi-instagram"></i>
+              Instagram
+            </div>
+          </a>
+          <a href="">
+            <div class="flex flex-inline">
+              <i class="fi fi-facebook"></i>
+              Facebook
+            </div>
+          </a>
+          <a href="">
+            <div class="flex flex-inline">
+              <i class="fi fi-whatsapp"></i>
+              WhatsApp
+            </div>
+          </a>
+        </div>
+        <div>
+          <div class="flex flex-inline flex-inline-top">
+            <i class="fi fi-map-marker-alt"></i>
+            Jl. Panji No.70, Cokoleo, Kepanjen, Kec. Kepanjen, Malang, Jawa
+            Timur 65163
+          </div>
         </div>
       </div>
     </div>
