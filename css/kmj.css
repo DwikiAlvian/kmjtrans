@@ -117,7 +117,7 @@ nav.navbar #sidebar ul {
   margin-left: auto;
 }
 nav.navbar a#openBtn span {
-  display: block;
+  display: none;
   position: relative;
   height: 20px;
   width: 50px;
@@ -754,6 +754,9 @@ span.indexing-full {
   }
   #sidebar #right {
     margin-left: auto;
+  }
+  nav.navbar a#openBtn span {
+    display: block;
   }
 }
 @media (max-width: 750px) {

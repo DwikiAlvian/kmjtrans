@@ -21,6 +21,7 @@ function openTab(evt, content) {
   evt.currentTarget.className += " active";
 }
 
+// SCROLLING EFFECT for NAVBAR
 window.onscroll = function () {
   scrollFunction();
 };
