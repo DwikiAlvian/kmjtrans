@@ -1,3 +1,7 @@
+var navbarButton = document.getElementById("openBtn");
+var closeButton = document.getElementById("closeBtn");
+var sidepanel = document.getElementById("sidebar");
+
 let vh = window.innerHeight * 0.01;
 const navbar = document.getElementsByClassName("navbar");
 
@@ -28,3 +32,28 @@ function scrollFunction() {
     document.getElementById("nav").classList.remove("active");
   }
 }
+
+// SIDEPANEL
+let navStat = false;
+navbarButton.addEventListener("click", () => {
+  if (!navStat) {
+    sidepanel.classList.add("open");
+    // navbarButton.classList.add("open");
+    navStat = true;
+  } else {
+    sidepanel.classList.remove("open");
+    // navbarButton.classList.remove("open");
+    navStat = false;
+  }
+});
+closeButton.addEventListener("click", () => {
+  if (!navStat) {
+    sidepanel.classList.add("open");
+    // navbarButton.classList.add("open");
+    navStat = true;
+  } else {
+    sidepanel.classList.remove("open");
+    // navbarButton.classList.remove("open");
+    navStat = false;
+  }
+});
