@@ -683,6 +683,27 @@ form button {
   font-family: "PoppinsBold";
 }
 
+/* AUTH */
+#auth .card {
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+#auth form.form {
+  width: 100%;
+  max-width: 500px;
+}
+#auth .foot {
+  margin-top: 25px;
+}
+#auth span.foot {
+  font-family: "PoppinsBold";
+  color: rgba(255, 255, 255, 0.4);
+}
+#auth span.foot a {
+  font-family: "PoppinsBold";
+  color: rgba(255, 255, 255);
+}
+
 /* COMMENT CARD */
 .comment-lists {
   padding: 125px 75px;
@@ -726,9 +747,20 @@ form button {
     var(--lightblue)
   );
 }
+.comment-card a.reply {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  transition: color 150ms;
+}
+.comment-card a.reply:hover {
+  color: rgba(255, 255, 255);
+}
 .comment-card.comment-reply {
   grid-template-columns: 20% 75%;
-  margin-top: 5px;
+  margin-top: 40px;
 }
 .comment-card.comment-reply::before {
   content: "";
@@ -745,6 +777,55 @@ form button {
   background-image: none;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
+}
+
+/* FORM */
+form.form {
+  padding: 25px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    0deg,
+    var(--lightblue),
+    rgba(255, 255, 255)
+  );
+}
+form.form .input-line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+form.form .input-line span.input-title {
+  color: var(--blue);
+  font-family: "PoppinsBold";
+  margin-bottom: 5px;
+}
+form.form input[type="text"],
+form.form input[type="password"] {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+  padding: 10px 15px;
+  color: rgba(26, 50, 99, 0.6);
+}
+form.form textarea {
+  resize: none;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 15px;
+  color: rgba(26, 50, 99, 0.6);
+}
+form.form p#disclaimer {
+  font-style: italic;
+  color: rgba(26, 50, 99, 0.4);
+  margin-bottom: 15px;
+  max-width: 450px;
+  font-size: 13px;
+}
+form.form button[type="submit"] {
+  display: block;
+  padding: 15px 25px;
+  margin-left: auto;
 }
 
 /* GRID */
@@ -793,6 +874,30 @@ form button {
 /* ==== */
 /* MISC */
 /* ==== */
+#socmed {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+#socmed span {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "PoppinsBold";
+  transition: color 150ms;
+}
+#socmed i.fi {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+#socmed a {
+  display: block;
+  margin-bottom: 15px;
+}
+#socmed a:hover i.fi {
+  color: white;
+  border: 2px solid white;
+}
+#socmed a:hover span {
+  color: white;
+}
 #address p {
   margin-left: 15px;
 }
