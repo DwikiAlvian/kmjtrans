@@ -704,6 +704,159 @@ form button {
   color: rgba(255, 255, 255);
 }
 
+/* RESULT */
+.result {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 100%;
+}
+.result .result-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.result .result-header #name {
+  font-family: "PoppinsBold";
+  font-size: 36px;
+}
+.result .result-header #id {
+  color: rgba(26, 50, 99, 0.4);
+}
+.result .result-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.result .result-content #address {
+  display: grid;
+  grid-template-columns: 48% auto;
+  column-gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.result .result-content #address #from,
+.result .result-content #address #to {
+  position: relative;
+  padding: 35px 20px 15px 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "PoppinsBold";
+  font-size: 20px;
+}
+.result .result-content #address #from::before,
+.result .result-content #address #to::before {
+  content: "AWAL";
+  position: absolute;
+  top: 15px;
+  font-size: 14px;
+  opacity: 0.4;
+}
+.result .result-content #address #to::before {
+  content: "TUJUAN";
+}
+.result .result-content #tracking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.result .result-content #tracking span {
+  font-family: "PoppinsBold";
+}
+.result .result-content #tracking .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.result .result-content #tracking .list #time {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 170px;
+}
+.result .result-content #tracking .list #time::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.result .result-content #tracking .list #time #hour {
+  font-family: "PoppinsBold";
+}
+.result .result-content #tracking .list #time #date {
+  opacity: 0.4;
+  font-family: "PoppinsBold";
+}
+.result .result-content #tracking .list #detail {
+  margin-left: 25px;
+}
+
+/* DATA LIVE */
+.data-live {
+  position: relative;
+}
+.data-live ul {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  width: 100%;
+  /* height: 0; */
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(245, 245, 250, 0.98),
+    rgba(230, 250, 255, 0.98)
+  );
+  backdrop-filter: blur(5px);
+  list-style-type: none;
+  border-radius: 15px;
+  /* border: 2px solid rgba(26, 50, 99, 0.2); */
+  box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.05);
+  animation-name: hide-data;
+  animation-duration: 50ms;
+  animation-delay: 150ms;
+  animation-iteration-count: infinite;
+}
+.data-live ul.show-data {
+  height: max-content;
+  animation-name: none;
+}
+@keyframes hide-data {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+.data-live ul li {
+  cursor: pointer;
+  padding: 15px 20px;
+  color: rgba(26, 50, 99, 0.4);
+  transition: background-color 150ms, color 150ms;
+}
+.data-live ul li:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: var(--blue);
+}
+
 /* COMMENT CARD */
 .comment-lists {
   padding: 125px 75px;
