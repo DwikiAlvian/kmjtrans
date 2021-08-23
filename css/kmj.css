@@ -210,16 +210,16 @@ nav.navbar a#openBtn span::after {
 /* TENTANG KAMI */
 .about-us {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 660px;
   z-index: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   background-size: cover;
-  text-align: right;
-  padding: 25px;
+  text-align: center;
+  padding: 125px 25px 25px 25px;
+  overflow: hidden;
 }
 .about-us::before {
   content: "";
@@ -236,24 +236,26 @@ nav.navbar a#openBtn span::after {
   );
 }
 .about-us .card {
-  align-items: flex-end;
-  max-width: 600px;
+  align-items: center;
+  max-width: 400px;
 }
 .about-us .image-sliding {
   position: absolute;
   left: 25px;
   bottom: 0;
   width: 100%;
-  overflow-y: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   padding-bottom: 25px;
 }
 .about-us .image-sliding img {
   height: 125px;
-  width: 500px;
+  width: 250px;
   object-fit: cover;
   margin-right: 15px;
+  flex-shrink: 0;
 }
 
 /* TEAM CARD */
@@ -458,6 +460,14 @@ nav.navbar a#openBtn span::after {
 .card.card-news .news-content a {
   font-family: "PoppinsBold";
   color: rgba(26, 50, 99, 0.6);
+}
+
+/* FORM HOMEPAGE */
+form button#centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
 }
 
 /* SPAN */
@@ -689,6 +699,7 @@ form.comment-form textarea {
   padding: 15px;
   resize: none;
   width: 100%;
+  height: 200px;
   margin-bottom: 15px;
   color: var(--blue);
 }
@@ -803,7 +814,7 @@ form button {
   width: 100%;
   margin-top: 10px;
   color: rgba(50, 50, 50);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 15px;
   border-radius: 15px;
 }
@@ -956,7 +967,7 @@ form button {
   display: grid;
   grid-template-columns: 20% 80%;
   column-gap: 25px;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 .comment-card .comment-detail {
   display: flex;
@@ -985,18 +996,25 @@ form button {
 }
 .comment-card a.reply {
   position: absolute;
-  right: 0;
-  bottom: -30px;
-  color: rgba(255, 255, 255, 0.4);
+  right: -25px;
+  top: -55px;
+  color: rgba(255, 255, 255, 0.6);
   font-style: italic;
   transition: color 150ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 15px;
 }
 .comment-card a.reply:hover {
   color: rgba(255, 255, 255);
 }
 .comment-card.comment-reply {
   grid-template-columns: 20% 75%;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+.comment-lists .comment-card.comment-reply:nth-child(1) {
+  margin-top: 65px;
 }
 .comment-card.comment-reply::before {
   content: "";
@@ -1448,14 +1466,21 @@ span.indexing-full {
   .comment-card .comment-detail {
     align-items: flex-start;
   }
+  .comment-card a.reply {
+    top: 0;
+    right: 0;
+  }
   .comment-card.comment-reply {
-    margin-top: 10px;
-    margin-right: 75px;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-left: 25px;
   }
   .comment-card.comment-reply::before {
-    height: 100px;
+    height: 75px;
     width: 50px;
     right: -65px;
+    top: 30px;
+    opacity: 0;
   }
   .footer .footer-content {
     grid-template-columns: auto;
@@ -1477,9 +1502,11 @@ span.indexing-full {
   }
   .result .result-content #address #from {
     border-radius: 15px 15px 0 0;
+    border-bottom: none;
   }
   .result .result-content #address #to {
     border-radius: 0 0 15px 15px;
+    border-top: none;
   }
   .result .result-content #tracking .list {
     flex-direction: column;
