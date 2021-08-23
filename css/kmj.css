@@ -33,6 +33,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  scrollbar-color: red;
 }
 a {
   text-decoration: none;
@@ -205,68 +206,85 @@ nav.navbar a#openBtn span::after {
 .section span.indexing-full {
   color: var(--orange);
 }
+
+/* TENTANG KAMI */
 .about-us {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  z-index: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 125px;
-  background-image: linear-gradient(0deg, var(--blue), var(--darkblue));
+  background-size: cover;
+  text-align: right;
+  padding: 25px;
 }
-.about-us img {
+.about-us::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
 }
-.about-us #head-text {
-  text-align: center;
+.about-us .card {
+  align-items: flex-end;
   max-width: 600px;
 }
-.about-us .card span.card-title {
+.about-us .image-sliding {
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 25px;
+}
+.about-us .image-sliding img {
+  height: 125px;
+  width: 500px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* TEAM CARD */
+.team-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 7.5px;
+  border-radius: 15px;
+}
+.team-card img {
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.team-card div {
+  display: flex;
+  flex-direction: column;
+}
+.team-card div span#name {
+  font-family: "PoppinsBold";
+  color: white;
   font-size: 24px;
 }
-.about-us #v-m {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  max-width: 600px;
-}
-.about-us #v-m p {
-  color: white;
-}
-.about-us #link {
-  max-width: 600px;
+.team-card div span#title {
+  font-family: "PoppinsBold";
   color: rgba(255, 255, 255, 0.4);
-}
-.about-us #link a {
-  display: block;
-  width: max-content;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 10px;
-  transition: color 150ms;
-}
-.about-us #link i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  height: 40px;
-  width: 40px;
-  font-size: 15px;
-  border-radius: 50%;
-  color: rgba(255, 255, 255, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  margin-right: 10px;
-  transition: color 150ms, border 150ms;
-}
-.about-us #link a:hover {
-  color: white;
-}
-.about-us #link a:hover i {
-  color: white;
-  border-color: white;
 }
 
 /* NAVIGATION */
@@ -1352,9 +1370,6 @@ span.indexing-full {
     justify-content: center;
     font-size: 18px;
     padding: 10px 15px;
-  }
-  .about-us {
-    padding: 125px 25px;
   }
   .flex-inline-top {
     margin-top: 50px;
