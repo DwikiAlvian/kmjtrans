@@ -706,11 +706,15 @@ form button {
 
 /* RESULT */
 .result {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(
+    135deg,
+    rgb(255, 183, 80),
+    rgba(255, 183, 64)
+  );
   padding: 20px 25px;
   border-radius: 15px;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .result .result-header {
   display: flex;
@@ -720,9 +724,10 @@ form button {
 .result .result-header #name {
   font-family: "PoppinsBold";
   font-size: 36px;
+  color: rgba(50, 50, 50);
 }
 .result .result-header #id {
-  color: rgba(26, 50, 99, 0.4);
+  color: rgba(50, 50, 50, 0.4);
 }
 .result .result-content {
   display: flex;
@@ -742,9 +747,10 @@ form button {
   position: relative;
   padding: 35px 20px 15px 20px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
   font-family: "PoppinsBold";
   font-size: 20px;
+  color: rgba(50, 50, 50);
+  border: 3px dashed rgba(50, 50, 50);
 }
 .result .result-content #address #from::before,
 .result .result-content #address #to::before {
@@ -761,49 +767,107 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
   width: 100%;
+  color: rgba(50, 50, 50);
+  margin-top: 25px;
 }
 .result .result-content #tracking span {
   font-family: "PoppinsBold";
+  background-color: rgba(50, 50, 50);
+  color: #ffb740;
+  padding: 5px 10px;
+  border-radius: 30px;
 }
 .result .result-content #tracking .list {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 10px;
+  color: rgba(50, 50, 50);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
 }
 .result .result-content #tracking .list #time {
   position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(50, 50, 50);
   max-width: 170px;
   text-align: right;
 }
-.result .result-content #tracking .list #time::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
 .result .result-content #tracking .list #time #hour {
   font-family: "PoppinsBold";
+  background: none;
+  padding: 0;
+  font-size: 24px;
 }
 .result .result-content #tracking .list #time #date {
   opacity: 0.4;
+  padding: 0;
   font-family: "PoppinsBold";
+  background: none;
+  font-size: 12px;
 }
 .result .result-content #tracking .list #detail {
-  margin-left: 25px;
+  margin-left: 15px;
+}
+.result .result-price {
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+.result .result-price div:nth-child(2) {
+  border-left: 3px dashed rgba(50, 50, 50, 0.4);
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.result .result-price span {
+  display: flex;
+  flex-direction: column;
+  font-family: "PoppinsBold";
+  color: rgba(50, 50, 50);
+  margin-bottom: 15px;
+}
+.result .result-price span#from::before,
+.result .result-price span#to::before,
+.result .result-price span#weight::before {
+  font-size: 12px;
+  opacity: 0.4;
+  content: "DARI";
+}
+.result .result-price span#to::before {
+  content: "TUJUAN";
+}
+.result .result-price span#weight::before {
+  content: "BERAT";
+}
+.result .result-price span#price {
+  position: relative;
+  flex-direction: row;
+  font-size: 48px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+.result .result-price span#price::before {
+  content: "Rp.";
+  margin-right: 10px;
+}
+.result .result-price span#price::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  content: "ESTIMASI HARGA";
+  opacity: 0.4;
+  margin-right: 10px;
 }
 
 /* DATA LIVE */
@@ -1415,6 +1479,16 @@ span.indexing-full {
   }
   .result .result-content #tracking .list #detail {
     margin-left: 0;
+    margin-top: 25px;
+  }
+  .result .result-price {
+    grid-template-columns: auto;
+  }
+  .result .result-price div:nth-child(2) {
+    border-left: none;
+    border-top: 3px dashed rgba(50, 50, 50, 0.4);
+    padding-left: 0;
+    padding-top: 25px;
     margin-top: 25px;
   }
 }
