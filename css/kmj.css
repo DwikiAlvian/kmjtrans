@@ -324,6 +324,10 @@ nav.navbar a#openBtn span::after {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   padding: 15px;
+  height: max-content;
+}
+.tabcontent form {
+  width: 100%;
 }
 @keyframes tabContent {
   0% {
@@ -423,6 +427,9 @@ nav.navbar a#openBtn span::after {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.card .data-live {
+  width: 100%;
 }
 .news-container {
   margin-top: 50px;
@@ -878,25 +885,31 @@ form button {
 .result .result-price span#weight::before {
   content: "BERAT";
 }
-.result .result-price span#price {
+.result .result-price span#reguler,
+.result .result-price span#express {
   position: relative;
   flex-direction: row;
   font-size: 48px;
   padding-top: 15px;
   margin-bottom: 0;
 }
-.result .result-price span#price::before {
+.result .result-price span#reguler::before,
+.result .result-price span#express::before {
   content: "Rp.";
   margin-right: 10px;
 }
-.result .result-price span#price::after {
+.result .result-price span#reguler::after,
+.result .result-price span#express::after {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
-  font-size: 12px;
-  content: "ESTIMASI HARGA";
+  font-size: 15px;
+  content: "REGULER";
   opacity: 0.4;
   margin-right: 10px;
+}
+.result .result-price span#express::after {
+  content: "EXPRESS";
 }
 
 /* DATA LIVE */
@@ -923,7 +936,7 @@ form button {
   box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.05);
   animation-name: hide-data;
   animation-duration: 50ms;
-  animation-delay: 150ms;
+  animation-delay: 250ms;
   animation-iteration-count: infinite;
 }
 .data-live ul.show-data {
@@ -1328,6 +1341,24 @@ span.indexing-full {
 }
 
 /* RESPONSIVE */
+@media (min-width: 1500px) {
+  .section {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  .footer {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  #splidecenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #splidecenter .splide {
+    max-width: 1366px;
+  }
+}
 @media (max-width: 1200px) {
   .footer .footer-content {
     padding: 75px 75px;
