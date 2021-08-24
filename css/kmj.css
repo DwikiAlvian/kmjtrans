@@ -1046,6 +1046,32 @@ form button {
   color: white;
 }
 
+/* PAGE BUTTON */
+.page-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 75px;
+}
+.page-button a {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  border-radius: 15px;
+  margin: 5px;
+  color: white;
+}
+.page-button span {
+  color: var(--blue);
+  font-family: "PoppinsBold";
+  margin: 0 15px;
+}
+
 /* FORM */
 form.form {
   padding: 25px;
