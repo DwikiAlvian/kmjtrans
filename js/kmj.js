@@ -135,7 +135,7 @@ for (i = 0; i < l; i++) {
   // ================================ //
   // ================================ //
   // ================================ //
-  for (j = 0; j < ll; j++) {
+  for (j = 1; j < ll; j++) {
     // j=1 ganti nang j=0
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
@@ -168,22 +168,29 @@ for (i = 0; i < l; i++) {
   });
   inputselect.addEventListener("focusout", function (e) {
     this.parentElement.classList.add("select-hide");
-    this.value = "";
+    // this.value = "";
   });
   var list = b.children;
   var result = b.firstChild.value.toUpperCase();
   for (let p = 1; p < b.childElementCount; p++) {
     b.firstChild.addEventListener("keyup", function () {
+      var res = this.parentElement.firstChild.value.toUpperCase();
       if (
-        this.parentElement.children[p].innerText
-          .toUpperCase()
-          .indexOf(this.parentElement.firstChild.value.toUpperCase())
+        this.parentElement.children[p].innerText.toUpperCase().indexOf(res) > -1
       ) {
-        this.parentElement.children[p].style.display = "none";
-      } else {
         this.parentElement.children[p].style.display = "";
+      } else {
+        this.parentElement.children[p].style.display = "none";
+      }
+      if (sum[i].innerText.toUpperCase().indexOf(result) > -1) {
+        sum[i].style.display = "";
+      } else {
+        sum[i].style.display = "none";
       }
     });
+    // inputselect.addEventListener("focusout", function () {
+    //   this.parentElement.children[p].style.display = "";
+    // });
   }
 }
 
