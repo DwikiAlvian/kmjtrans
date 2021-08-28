@@ -168,6 +168,7 @@ for (i = 0; i < l; i++) {
   });
   inputselect.addEventListener("focusout", function (e) {
     this.parentElement.classList.add("select-hide");
+    this.value = "";
   });
   var list = b.children;
   var result = b.firstChild.value.toUpperCase();
