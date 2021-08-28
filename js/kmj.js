@@ -174,9 +174,14 @@ for (i = 0; i < l; i++) {
   var result = b.firstChild.value.toUpperCase();
   for (let p = 1; p < b.childElementCount; p++) {
     b.firstChild.addEventListener("keyup", function () {
-      var res = this.parentElement.firstChild.value.toUpperCase();
+      var res = this.parentElement.firstChild.value
+        .replace(" ", "")
+        .toUpperCase();
       if (
-        this.parentElement.children[p].innerText.toUpperCase().indexOf(res) > -1
+        this.parentElement.children[p].innerText
+          .replace(" ", "")
+          .toUpperCase()
+          .indexOf(res) > -1
       ) {
         this.parentElement.children[p].style.display = "";
       } else {
