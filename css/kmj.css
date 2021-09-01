@@ -177,6 +177,9 @@ nav.navbar ul li ul.dropdown li a:hover {
 }
 
 /* BUTTON */
+form button {
+  cursor: pointer;
+}
 .button {
   display: block;
   color: white;
@@ -678,6 +681,10 @@ input[type="text"] {
     rgba(255, 255, 255),
     rgba(255, 255, 255, 0)
   );
+}
+.article-header .article-content.article-content-center {
+  align-items: center;
+  padding: 25px 15% 75px 15%;
 }
 .article-header .article-content::before {
   content: "";
@@ -1363,9 +1370,132 @@ form.form button[type="submit"] {
   border-radius: 5px;
 }
 
+/* GALLERY */
+.gallery {
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255),
+    var(--lightblue)
+  );
+  display: grid;
+  padding: 25px;
+  /* grid-template-columns: calc(33% - 18.3px) calc(33% - 18.3px) calc(
+      33% - 18.3px
+    ); */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+.gallery img {
+  width: 100%;
+}
+.gallery figure {
+  margin-bottom: 15px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figure figcaption {
+  font-style: italic;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 /* ==== */
 /* MISC */
 /* ==== */
+#gallery {
+  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.15);
+}
+.contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 25px 25px 25px;
+  margin-top: 75px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.contact-card span.contact-card-title {
+  position: absolute;
+  top: -15px;
+  background-color: var(--blue);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.contact-card a.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px 20px 10px 10px;
+  margin: 5px;
+}
+.contact-card a.button i {
+  margin-right: 7.5px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255);
+  color: var(--orange);
+}
+.contact-button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#servicesection {
+  padding-bottom: 50px;
+}
+#servicecontainer {
+  padding-bottom: 1px;
+}
+.service-wrapper {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 75px;
+  margin-bottom: 125px;
+  padding: 50px 25px 25px 25px;
+  box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.15);
+}
+.service-wrapper #tab {
+  background: none;
+  padding: 0;
+}
+.service-wrapper #tab .card-res {
+  display: none;
+}
+.service-wrapper .news-container {
+  padding: 0;
+}
+span.service-wrapper-title {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blue);
+  color: white;
+  font-size: 25px;
+  font-family: "PoppinsBold";
+  border-radius: 30px;
+  padding: 10px 25px;
+  width: 100%;
+  max-width: max-content;
+  text-align: center;
+  box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.15);
+}
 .big-search {
   display: flex;
   flex-direction: row;
@@ -1601,6 +1731,10 @@ span.indexing-full {
   }
   #articles .category {
     right: 15%;
+  }
+  .service-wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 @media (max-width: 1200px) {
@@ -1849,16 +1983,29 @@ span.indexing-full {
     position: relative;
     right: 0;
     top: 0;
-    /* right: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: max-content;
-    width: 50%;
-    padding-left: 0;
-    margin-left: 0; */
   }
   .news-container.news-container.news-service-container {
     grid-template-columns: auto;
+  }
+  .service-wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .service-wrapper span.service-wrapper-title {
+    font-size: 20px;
+  }
+  .service-wrapper .news-container {
+    padding: 15px !important;
+    margin: 0;
+  }
+  .service-wrapper .news-container .card-news {
+    margin: 0;
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 15px;
   }
 }
 
@@ -1922,6 +2069,9 @@ span.indexing-full {
   }
   .testimony .testy-grid p#quote {
     font-size: 20px;
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 365px) {

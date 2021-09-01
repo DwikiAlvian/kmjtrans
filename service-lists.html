@@ -22,11 +22,11 @@
       </div>
     </nav>
 
-    <div class="gradient-light-blue">
+    <div id="servicecontainer" class="gradient-light-blue">
       <!-- FIRST SECTION -->
-      <div class="section section-wider">
+      <div id="servicesection" class="section section-wider">
         <div class="card card-center card-text-blue">
-          <span class="card-nav">LAYANAN</span>
+          <span class="card-nav">LAYANAN KAMI</span>
           <span class="card-title"> Jenis-Jenis Layanan Dari Kami </span>
           <p>Pahami lebih lanjut tentang layanan kami</p>
 
@@ -40,49 +40,296 @@
         </div>
       </div>
 
-      <!-- SECOND SECTION -->
-      <div
-        id="articles"
-        class="news-container news-service-container section section-wider"
-      >
-        <div class="category" tabindex="1">
-          <span>Lihat Kategori</span>
-          <ul>
-            <li><a href="">News 1</a></li>
-            <li><a href="">News 2</a></li>
-            <li><a href="">News 3</a></li>
-          </ul>
-        </div>
-        <div class="card card-news">
-          <!-- THUMBNAIL ARTIKEL -->
-          <img src="" alt="" class="news" />
-          <div class="news-content">
-            <!-- JUDUL ARTIKEL -->
-            <span class="card-title">Ekspedisi</span>
-            <!-- RINGKASAN/ISI ARTIKEL -->
-            <p>Lorem ipsum dolor sit amet</p>
-            <a href="service.html">BACA SELENGKAPNYA</a>
+      <!-- SECTION CEK HARGA, RESI, LOKASI -->
+      <div class="service-wrapper">
+        <span class="service-wrapper-title">PENGECEKAN BARANG</span>
+        <div
+          id="tab"
+          class="
+            grid grid-res
+            col col-40-60
+            section section-wider section-white
+          "
+        >
+          <div>
+            <div class="card card-res">
+              <span class="card-nav">LAYANAN</span>
+              <span class="card-title"
+                >Mulai dari Cek Harga sampai Cek Lokasi Penjemputan</span
+              >
+              <p>
+                Lakukan pengecekan harga sebelum memesan, atau melacak paket
+                pesanan
+              </p>
+            </div>
+            <div class="navigation grid-right-50">
+              <a
+                class="nav-link active"
+                href="#tab"
+                onclick="openTab(event, 'Bayar')"
+                >Hitung Tarif</a
+              >
+              <a class="nav-link" href="#tab" onclick="openTab(event, 'Lacak')"
+                >Lacak Paket</a
+              >
+              <a class="nav-link" href="#tab" onclick="openTab(event, 'Lokasi')"
+                >Lokasi</a
+              >
+            </div>
+          </div>
+          <div id="tabcontent">
+            <div class="flex flex-center">
+              <!-- >>>>>>>>>>>>>>>>>>> -->
+              <!-- ESTIMASI PEMBAYARAN -->
+              <!-- <<<<<<<<<<<<<<<<<<< -->
+              <div id="Bayar" class="tabcontent">
+                <!-- Form Estimasi Pembayaran -->
+                <form action="">
+                  <div class="grid col col-2 grid-res">
+                    <div class="card card-white">
+                      <div class="card-inline">
+                        <i class="fi fi-map-marker-alt"></i>
+                        <span>Lokasi Awal</span>
+                      </div>
+                      <p>Pilih lokasi penjemputan barang yang akan dikirim</p>
+                      <div class="custom-select">
+                        <select>
+                          <option value="0">Pilih Kota</option>
+                          <option value="1">Alaska</option>
+                          <option value="2">Bahrain</option>
+                          <option value="3">Colombus</option>
+                          <option value="4">Delta</option>
+                          <option value="5">Frankfurt</option>
+                          <option value="6">Germany</option>
+                          <option value="7">Heisenberg</option>
+                          <option value="8">Indonesia</option>
+                          <option value="9">Jalaludin</option>
+                          <option value="10">Kerbal</option>
+                          <option value="11">Lion</option>
+                          <option value="12">Manhattan</option>
+                          <option value="13">Zahra</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="card card-white">
+                      <div class="card-inline">
+                        <i class="fi fi-navigate"></i>
+                        <span>Lokasi Tujuan</span>
+                      </div>
+                      <p>Barang yang dijemput akan dikirimkan ke lokasi ini</p>
+                      <div class="custom-select">
+                        <select>
+                          <option value="0">Pilih Kota</option>
+                          <option value="1">Alaska, America</option>
+                          <option value="2">Bahrain, Arab</option>
+                          <option value="3">Colombus, Christopher</option>
+                          <option value="4">Delta, Conan</option>
+                          <option value="5">Frankfurt, Germany</option>
+                          <option value="6">Germany, Hitler</option>
+                          <option value="7">Heisenberg, Karl</option>
+                          <option value="8">Indonesia, Jakarta</option>
+                          <option value="9">Jalaludin, El</option>
+                          <option value="10">Kerbal, Program</option>
+                          <option value="11">Lion, King</option>
+                          <option value="12">Manhattan, Amerika</option>
+                          <option value="13">Zahra, Winters</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid col">
+                    <div class="card card-white">
+                      <div class="card-inline">
+                        <i class="fi fi-shopping-basket"></i>
+                        <span>Berat Barang</span>
+                      </div>
+                      <p>Berat/Weight dari barang yang akan dikirimkan</p>
+                      <!-- Input Masukkan Berat -->
+                      <input type="text" placeholder="Masukkan Berat (kg)" />
+                      <!-- Input Masukkan Berat -->
+                    </div>
+                  </div>
+                  <button id="centered" type="submit">
+                    Cek Estimasi Biaya
+                  </button>
+                </form>
+
+                <!-- Hasil Dari Cek Estimasi Harga -->
+                <div id="priceTab" class="result">
+                  <div class="result-price">
+                    <div>
+                      <span id="from">Malang</span>
+                      <span id="to">Surabaya</span>
+                      <span id="weight">50kg</span>
+                    </div>
+                    <div>
+                      <span id="reguler">30.000</span>
+                      <span id="express">70.000</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Hasil Dari Cek Estimasi Harga -->
+              </div>
+            </div>
+
+            <!-- >>>>>>>>>>> -->
+            <!-- LACAK PAKET -->
+            <!-- <<<<<<<<<<< -->
+            <div id="Lacak" class="tabcontent" style="display: none">
+              <form action="">
+                <div class="grid col">
+                  <div class="card card-white">
+                    <div class="card-inline">
+                      <i class="fi fi-ticket-alt"></i>
+                      <span>Masukkan No. Resi</span>
+                    </div>
+                    <p>
+                      Nomor Resi didapatkan setelah barang diambil untuk
+                      dikirmkan
+                    </p>
+                    <input type="text" placeholder="Cth: 94328012" />
+                  </div>
+                </div>
+                <button id="centered" type="submit">Konfirmasi No. Resi</button>
+              </form>
+
+              <!-- Hasil Dari Lacak Lokasi Barang -->
+              <div class="result">
+                <div class="result-header">
+                  <span id="name"> Rexothys </span>
+                  <span id="id"> 3298652980924 </span>
+                </div>
+                <div class="result-content">
+                  <div id="address">
+                    <span id="from">Malang, Jawa Timur</span>
+                    <span id="to">Surabaya, Jawa Timur</span>
+                  </div>
+                  <div id="tracking">
+                    <span>STATUS PENGIRIMAN</span>
+                    <div class="list">
+                      <div id="time">
+                        <span id="hour">18:15</span>
+                        <span id="date">14 Agustus 2021</span>
+                      </div>
+                      <div id="detail">
+                        <p>Barang sampai di transit</p>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div id="time">
+                        <span id="hour">13:15</span>
+                        <span id="date">14 Agustus 2021</span>
+                      </div>
+                      <div id="detail">
+                        <p>Barang dipickup dari alamat yang tertera</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Hasil Dari Lacak Lokasi Barang -->
+            </div>
+
+            <!-- >>>>>> -->
+            <!-- LOKASI -->
+            <!-- <<<<<< -->
+            <div id="Lokasi" class="tabcontent" style="display: none">
+              <div class="grid col col-2 grid-res">
+                <div class="card card-white card-text-small">
+                  <span class="card-title">Kab. Malang</span>
+                </div>
+                <div class="card card-white card-text-small">
+                  <span class="card-title">Kab. Blitar</span>
+                </div>
+                <div class="card card-white card-text-small">
+                  <span class="card-title">D.I Yogyakarta</span>
+                </div>
+                <div class="card card-white card-text-small">
+                  <span class="card-title">Kab. Semarang</span>
+                </div>
+                <div class="card card-white card-text-small">
+                  <span class="card-title">USSR</span>
+                </div>
+                <div class="card card-white card-text-small">
+                  <span class="card-title">Germany</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card card-news">
-          <!-- THUMBNAIL ARTIKEL -->
-          <img src="" alt="" class="news" />
-          <div class="news-content">
-            <!-- JUDUL ARTIKEL -->
-            <span class="card-title">Open B.O</span>
-            <!-- RINGKASAN/ISI ARTIKEL -->
-            <p>Lorem ipsum dolor sit amet</p>
-            <a href="service.html">BACA SELENGKAPNYA</a>
+      </div>
+
+      <!-- SECTION JENIS LAYANAN 2 -->
+      <div class="service-wrapper">
+        <span class="service-wrapper-title">LAYANAN EKSPEDISI</span>
+        <div
+          id="articles"
+          class="news-container news-service-container section section-wider"
+        >
+          <div class="card card-news">
+            <!-- THUMBNAIL LAYANAN -->
+            <img src="" alt="" class="news" />
+            <div class="news-content">
+              <!-- JUDUL LAYANAN -->
+              <span class="card-title">Ekspedisi</span>
+              <!-- RINGKASAN/ISI LAYANAN -->
+              <p>Lorem ipsum dolor sit amet</p>
+              <a href="service.html">BACA SELENGKAPNYA</a>
+            </div>
+          </div>
+          <div class="card card-news">
+            <!-- THUMBNAIL LAYANAN -->
+            <img src="" alt="" class="news" />
+            <div class="news-content">
+              <!-- JUDUL LAYANAN -->
+              <span class="card-title">Open B.O</span>
+              <!-- RINGKASAN/ISI LAYANAN -->
+              <p>Lorem ipsum dolor sit amet</p>
+              <a href="service.html">BACA SELENGKAPNYA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION JENIS LAYANAN 3 -->
+      <div class="service-wrapper">
+        <span class="service-wrapper-title">LAYANAN EKSPEDISI</span>
+        <div
+          id="articles"
+          class="news-container news-service-container section section-wider"
+        >
+          <div class="card card-news">
+            <!-- THUMBNAIL LAYANAN -->
+            <img src="" alt="" class="news" />
+            <div class="news-content">
+              <!-- JUDUL LAYANAN -->
+              <span class="card-title">Ekspedisi</span>
+              <!-- RINGKASAN/ISI LAYANAN -->
+              <p>Lorem ipsum dolor sit amet</p>
+              <a href="service.html">BACA SELENGKAPNYA</a>
+            </div>
+          </div>
+          <div class="card card-news">
+            <!-- THUMBNAIL LAYANAN -->
+            <img src="" alt="" class="news" />
+            <div class="news-content">
+              <!-- JUDUL LAYANAN -->
+              <span class="card-title">Open B.O</span>
+              <!-- RINGKASAN/ISI LAYANAN -->
+              <p>Lorem ipsum dolor sit amet</p>
+              <a href="service.html">BACA SELENGKAPNYA</a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- PAGE BUTTON -->
-      <div class="page-button">
+      <!-- <div class="page-button">
         <a href=""><i class="fi fi-angle-left"></i></a>
         <span>1/5</span>
         <a href=""><i class="fi fi-angle-right"></i></a>
-      </div>
+      </div> -->
     </div>
 
     <!-- FOOTER -->
