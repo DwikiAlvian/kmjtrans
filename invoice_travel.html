@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/invoice.css" />
+    <title>Invoice</title>
+    <style>
+      /* DELETE THIS PART IF NOT NEEDED */
+      body {
+        overflow-x: scroll;
+        display: flex;
+        background-image: linear-gradient(
+          135deg,
+          rgba(255, 255, 255),
+          rgba(181, 207, 247)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice">
+      <!-- KOP -->
+      <div class="invoice-header">
+        <span>kmjtrans - INVOICE</span>
+        <span class="mg-left-auto">TRAVEL</span>
+      </div>
+
+      <!-- PENGIRIM/PENERIMA -->
+      <div class="invoice-travel">
+        <div class="wrapper">
+          <span id="title">NAMA TRAVEL</span>
+          <span id="detail">Rosalia Indah</span>
+        </div>
+        <div class="wrapper">
+          <span id="title">FASILITAS</span>
+          <span id="detail">Full BO</span>
+        </div>
+        <div class="wrapper">
+          <span id="title">KAPASITAS</span>
+          <span id="detail">50</span>
+        </div>
+        <div class="wrapper">
+          <span id="title">HARGA KURSI</span>
+          <span id="detail">Rp. 35.000,00</span>
+        </div>
+      </div>
+
+      <!-- TABEL -->
+      <div class="invoice-point">
+        <div class="wrapper">
+          <span id="title">PENJEMPUTAN</span>
+          <span id="detail">Blitar, Jawa Timur</span>
+        </div>
+        <div class="wrapper">
+          <span id="title">DESTINASI</span>
+          <span id="detail">Bandung, Jawa Barat</span>
+        </div>
+        <div class="wrapper wrapper-small">
+          <span id="title">TANGGAL PEMBERANGKATAN</span>
+          <span id="detail">Kamis, 16 September 2021</span>
+        </div>
+        <div class="wrapper wrapper-small">
+          <span id="title">JAM</span>
+          <span id="detail">09:00</span>
+        </div>
+      </div>
+
+      <!-- <table class="invoice-table table-2" style="margin-top: 0">
+        <tr>
+          <th>TANGGAL PEMBERANGKATAN</th>
+          <th>JAM</th>
+        </tr>
+        <tr>
+          <td>Kamis, 16 September 2021</td>
+          <td>09:00</td>
+        </tr>
+      </table> -->
+
+      <table class="invoice-table">
+        <tr>
+          <th>NAMA PENUMPANG</th>
+          <th>NO HP</th>
+          <th>ALAMAT</th>
+        </tr>
+        <tr>
+          <td>Roselia Yuanita</td>
+          <td>08523095868923</td>
+          <td>Jl. Kebobang 12</td>
+        </tr>
+      </table>
+
+      <!-- TABEL KEDUA -->
+      <div class="invoice-status">
+        <div class="wrapper">
+          <span id="title">STATUS PEMBAYARAN</span>
+          <span class="larger" id="detail">LUNAS</span>
+        </div>
+        <div class="mg-left-auto">
+          <div class="wrapper wrapper-inline">
+            <span id="title">SUBTOTAL</span>
+            <span id="detail">Rp. 1.750.000,00</span>
+          </div>
+          <div class="wrapper wrapper-inline">
+            <span id="title">DISKON</span>
+            <span id="detail">Rp. 20.000,00</span>
+          </div>
+          <div id="total" class="wrapper wrapper-inline">
+            <span id="title">TOTAL BAYAR</span>
+            <span id="detail">Rp. 1.730.000,00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TANDA TANGAN -->
+      <div class="invoice-signature">
+        <div id="ttd" class="flex flex-center">
+          <span id="title">PENUMPANG</span>
+          <div id="signature"></div>
+          <span id="title">(...................................)</span>
+        </div>
+        <div class="flex flex-center">
+          <img src="" alt="" />
+          <span id="title">No. Resi : 329659328709</span>
+        </div>
+        <div id="ttd" class="flex flex-center">
+          <span id="title">PETUGAS</span>
+          <div id="signature"></div>
+          <span id="title">Fella Aulia Rizkita</span>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="invoice-footer">
+        <span id="date">04 Agustus 2021</span>
+        <span id="id">INV/04/2/69000</span>
+      </div>
+    </div>
+  </body>
+  <script src="js/kmj.js"></script>
+</html>
